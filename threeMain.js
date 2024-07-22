@@ -81,3 +81,5 @@ function render() {
 }
 
 animate()
+
+console.log("Three.js")
