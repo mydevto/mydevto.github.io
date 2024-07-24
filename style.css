@@ -1,9 +1,12 @@
 *{
-    margin: -5px;
+    margin: 0;
     padding: 0;
 }
 
 body{
-width:100%;height:100%;
-postion:fixed;
+    background-color: rgb(10, 10, 10);
+}
+
+.choices{
+    background-color: #131313;
 }
