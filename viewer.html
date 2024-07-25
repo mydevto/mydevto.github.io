@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FBX viewer : view your fbx" />
+    <meta name="google-site-verification" content="XsAE2ds_RmsrnGRJXeygsI6ASnjQr596jLooGuEGr28" />
+    <meta name="keywords" content="HTML, SEO , FBX , Test , Preview , Dev , Github , THREE.js , Blender , Viewer" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.166.1/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>FBX Viewer</title>
+  </head>
+  <body class="w-screen h-screen flex flex-col">
+    <h1 class="hidden">Test site</h1>
+    <h1 class="hidden">FBX preview</h1>
+    <p class="text-white p-3 load_text"></p>
+    <div class="w-screen h-screen flex flex-col-reverse justify-center gap-5 items-center preview">
+      <div class="sm:scale-95 scale-75">
+        <div class="choices p-5 flex flex-row gap-10 inline">
+          <button class="bike w-24 bg-slate-500" id="bike"><img src="public/bike.png" class="w-full h-full" /></button>
+          <button class="bike w-28 bg-slate-500" id="keeb"><img src="public/keeb.png" class="w-full h-full" /></button>
+          <button class="bike w-28 bg-slate-500" id="handGun">
+            <img src="public/handgun.png" class="w-full h-full" />
+          </button>
+
+          <label for="upload" class="bg-slate-500 p-8 font-bold">Browse</label>
+          <input
+            class="add w-20 bg-slate-500 p-8 opacity-0 -z-1 absolute hidden"
+            type="file"
+            id="upload"
+            accept=".fbx"
+          />
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/threeMain.js"></script>
+  </body>
+</html>
