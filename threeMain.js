@@ -1,3 +1,5 @@
+
+
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
@@ -54,6 +56,7 @@ controls.target.set(0, 0, 0);
 // const material = new THREE.MeshNormalMaterial()
 
 function loadOnClick(path, elemId) {
+  scene.remove(scene.children[2]);
   document.getElementById(elemId).addEventListener("click", () => {
     loadFBXmodels(path);
     scene.remove(scene.children[2]);
